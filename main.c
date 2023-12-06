@@ -4,7 +4,7 @@
 
 void cadastro();
 void buscar();
-
+//variaveis globais 
 typedef struct {
   int codigo_do_produto;
   char nome_da_marca[100];
@@ -14,19 +14,19 @@ typedef struct {
   int tamanho_do_produto[20], cont, quat_de_produtos;
   char vendedor[10];
 } roupas;
-
+//variaveis de controle
 roupas estoque[lot_max_estoque];
 int qtd_estoque = 0;
 int escolha_do_menu(int b);
 int code;
-
+//função principal
 int main() {
 
   int controle;
 
   while (controle != 3) {
 
-    printf("                     ++++                            \n");
+    printf("                     ++++                             \n");
     printf("                   +      +                           \n");
     printf("                  +        +                          \n");
     printf("                 +          +                         \n");
@@ -39,11 +39,12 @@ int main() {
     printf("         +                         +                  \n");
     printf("           +                     +                    \n");
     printf("             +                 +                      \n");
-    printf("           +                     +                     \n");
-    printf("         +                         +                   \n");
-    printf("       +                             +                 \n");
-    printf("     +                                 +               \n");
-    printf("   + + + + + + + + + + + + + + + + + + + +           \n");
+    printf("           +                     +                    \n");
+    printf("         +                         +                  \n");
+    printf("       +                             +                \n");
+    printf("     +                                 +              \n");
+    printf("   + + + + + + + + + + + + + + + + + + + +            \n");
+
 
     printf(" \n   ----------- JG KIDS -------------\n");
     printf("   ================================= \n");
@@ -58,7 +59,7 @@ int main() {
   }
   return 0;
 }
-
+// estrutura para escolha do menu
 int escolha_do_menu(int b) {
 
   switch (b) {
@@ -81,7 +82,7 @@ int escolha_do_menu(int b) {
   }
   return 0;
 }
-
+//função para cadastro
 void cadastro() {
 
   if (code >= 3) {
@@ -91,7 +92,7 @@ void cadastro() {
   }
 
   
-   printf("                     ++++                            \n");
+    printf("                     ++++                             \n");
     printf("                   +      +                           \n");
     printf("                  +        +                          \n");
     printf("                 +          +                         \n");
@@ -104,11 +105,11 @@ void cadastro() {
     printf("         +                         +                  \n");
     printf("           +                     +                    \n");
     printf("             +                 +                      \n");
-    printf("           +                     +                     \n");
-    printf("         +                         +                   \n");
-    printf("       +                             +                 \n");
-    printf("     +                                 +               \n");
-    printf("   + + + + + + + + + + + + + + + + + + + +           \n");
+    printf("           +                     +                    \n");
+    printf("         +                         +                  \n");
+    printf("       +                             +                \n");
+    printf("     +                                 +              \n");
+    printf("   + + + + + + + + + + + + + + + + + + + +            \n");
 
 roupas (peca_nova);
   printf("Informe o codigo do produto: \n");
@@ -138,7 +139,7 @@ roupas (peca_nova);
   estoque[code] = peca_nova;
   code++;
 }
-
+//função de buscar
 void buscar() {
   int consultar_codigo = 0;
   int achou = 0;
@@ -151,6 +152,7 @@ void buscar() {
   scanf("%d", &consultar_codigo);
   getchar();
 
+// estrutura de repetição de consulta do codigo digitado
   for (int i = 0; i < 5; i++) {
     if (estoque[i].codigo_do_produto == consultar_codigo) {
 
